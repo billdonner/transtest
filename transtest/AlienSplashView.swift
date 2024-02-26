@@ -23,9 +23,7 @@ struct  AlienSplashView: View {
     }
 }
  
-struct OuterView: View {
-
-  
+struct DemoSplashScreen: View {
     @State private var showMainView = false
     
     var body: some View {
@@ -49,5 +47,5 @@ struct OuterView: View {
  
 
 #Preview {
-  OuterView()
+  DemoSplashScreen()
 }

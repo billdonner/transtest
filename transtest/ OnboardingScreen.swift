@@ -7,23 +7,6 @@
 
 import SwiftUI
 
-
-// The main application view displayed after onboarding
-struct SimulatedMainAppView: View {
-  @AppStorage("level")  var selectedLevel: DifficultyLevel = .medium
-  @AppStorage("topic")  var selectedTopic : SampleTopics = .Movies
-  var body: some View {
-    ZStack {
-      FullMainView()
-      VStack {
-        Text("Welcome to the Simulated Main App!")
-        Text("level is \(selectedLevel) ;  topic is \(selectedTopic)")
-          .padding()
-      }
-    }
-  }
-}
-
 // Define a simple model for the onboarding slides
 struct OnboardingSlide {
     let title: String
@@ -47,12 +30,6 @@ enum DifficultyLevel : String,CaseIterable,Identifiable {
   case medium
   case hard
 }
-
-
-
-
-
-
 
 // Onboarding view that displays slides and a completion button on the last slide
 struct OnboardingView: View {
@@ -152,8 +129,6 @@ struct OnboardingView: View {
 struct OnboardingScreen: View {
   @State var isPresented = false
   var body: some View {
-    
-    
     OnboardingView(){
       let _ = print("Done Onboarding")
       isPresented = true
@@ -165,10 +140,7 @@ struct OnboardingScreen: View {
 }
 
 struct DemoFullScreen: View {
-
-  
     @State private var showMainView = false
-    
     var body: some View {
         ZStack {
            OnboardingScreen()
