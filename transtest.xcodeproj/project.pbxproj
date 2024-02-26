@@ -59,10 +59,10 @@
 				889CEB832B8B869B00D88E38 /* Info.plist */,
 				889CEB772B8B839500D88E38 /* AlienSplashView.swift */,
 				889CEB852B8BA27600D88E38 /*  OnboardingScreen.swift */,
+				88CFB0962B8C112600AA9C41 /* SampleOnboardingApp.swift */,
 				88CFB0982B8C1C7F00AA9C41 /* SimulatedMainAppView.swift */,
 				889CEB792B8B839600D88E38 /* Assets.xcassets */,
 				889CEB7B2B8B839600D88E38 /* Preview Content */,
-				88CFB0962B8C112600AA9C41 /* SampleOnboardingApp.swift */,
 			);
 			path = transtest;
 			sourceTree = "<group>";

@@ -13,25 +13,24 @@ struct FullMainView:View {
   }
 }
 struct  AlienSplashView: View {
-  let showMainView:Bool
+ // let showMainView:Bool
     var body: some View {
         Image("Picture") // Use the custom launch image asset name here
             .resizable()
             .aspectRatio(contentMode: .fill)
             .ignoresSafeArea()
-            .opacity(showMainView ? 0 : 1)
+           // .opacity(showMainView ? 0 : 1)
     }
 }
  
 struct DemoSplashScreen: View {
     @State private var showMainView = false
-    
     var body: some View {
         ZStack {
             FullMainView()
                 .opacity(showMainView ? 1 : 0) // Show one or the other
             VStack {
-              AlienSplashView(showMainView: showMainView)
+              AlienSplashView()
                     .opacity(showMainView ? 0 : 1)
             }
         }

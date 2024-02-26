@@ -146,7 +146,7 @@ struct DemoFullScreen: View {
            OnboardingScreen()
                 .opacity(showMainView ? 1 : 0) // Show one or the other
             VStack {
-              AlienSplashView(showMainView: showMainView)
+              AlienSplashView()
                     .opacity(showMainView ? 0 : 1)
             }
         }
