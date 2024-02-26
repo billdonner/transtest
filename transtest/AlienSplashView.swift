@@ -6,13 +6,13 @@
 //
 import SwiftUI
 
-struct MainView:View {
+struct FullMainView:View {
   var body: some View {
     Color.red
       .ignoresSafeArea()
   }
 }
-fileprivate struct  AlienSplashView: View {
+struct  AlienSplashView: View {
   let showMainView:Bool
     var body: some View {
         Image("Picture") // Use the custom launch image asset name here
@@ -30,7 +30,7 @@ struct OuterView: View {
     
     var body: some View {
         ZStack {
-            MainView()
+            FullMainView()
                 .opacity(showMainView ? 1 : 0) // Show one or the other
             VStack {
               AlienSplashView(showMainView: showMainView)
@@ -38,8 +38,8 @@ struct OuterView: View {
             }
         }
         .onAppear {
-            withAnimation(Animation.easeIn(duration: 4.5).delay(0.5)) {
-              showMainView = true // Start the transition by changing showSplashView to true
+            withAnimation(Animation.easeIn(duration:2.5).delay(0.5)) {
+              showMainView = true // Start the transition
             }
         }
     }
