@@ -13,6 +13,7 @@
 		889CEB862B8BA27600D88E38 /*  OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889CEB852B8BA27600D88E38 /*  OnboardingScreen.swift */; };
 		88CFB0972B8C112600AA9C41 /* SampleOnboardingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFB0962B8C112600AA9C41 /* SampleOnboardingApp.swift */; };
 		88CFB0992B8C1C7F00AA9C41 /* SimulatedMainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFB0982B8C1C7F00AA9C41 /* SimulatedMainAppView.swift */; };
+		88CFB09B2B9178B900AA9C41 /* PickerwDisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFB09A2B9178B900AA9C41 /* PickerwDisable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		889CEB852B8BA27600D88E38 /*  OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " OnboardingScreen.swift"; sourceTree = "<group>"; };
 		88CFB0962B8C112600AA9C41 /* SampleOnboardingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOnboardingApp.swift; sourceTree = "<group>"; };
 		88CFB0982B8C1C7F00AA9C41 /* SimulatedMainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatedMainAppView.swift; sourceTree = "<group>"; };
+		88CFB09A2B9178B900AA9C41 /* PickerwDisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerwDisable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				889CEB832B8B869B00D88E38 /* Info.plist */,
 				889CEB772B8B839500D88E38 /* AlienSplashView.swift */,
+				88CFB09A2B9178B900AA9C41 /* PickerwDisable.swift */,
 				889CEB852B8BA27600D88E38 /*  OnboardingScreen.swift */,
 				88CFB0962B8C112600AA9C41 /* SampleOnboardingApp.swift */,
 				88CFB0982B8C1C7F00AA9C41 /* SimulatedMainAppView.swift */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				889CEB782B8B839500D88E38 /* AlienSplashView.swift in Sources */,
+				88CFB09B2B9178B900AA9C41 /* PickerwDisable.swift in Sources */,
 				889CEB862B8BA27600D88E38 /*  OnboardingScreen.swift in Sources */,
 				88CFB0992B8C1C7F00AA9C41 /* SimulatedMainAppView.swift in Sources */,
 				88CFB0972B8C112600AA9C41 /* SampleOnboardingApp.swift in Sources */,

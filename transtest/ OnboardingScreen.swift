@@ -14,8 +14,8 @@ struct OnboardingSlide {
     let image: String
     let kind: SlideKind
   
-  enum SlideKind : String,CaseIterable,Identifiable {
-    var id: String {self.rawValue}
+  enum SlideKind : String,CaseIterable{
+    
     case plain
     case levelPicker
     case topicPicker
@@ -79,18 +79,16 @@ struct OnboardingView: View {
               VStack {
                 Text("Select Topics:")
                   .font(.headline)
-                Picker("Select First Topic", selection: $selectedTopic) {
-                  // Loop through all topics
-                  ForEach(SampleTopics.allCases) { level in
-                    Text(level.rawValue).tag(level).font(.largeTitle)
-                  }
-                }
-                .pickerStyle(InlinePickerStyle())// You can adjust the picker style
+
+              let items = SampleTopics.allCases.map { PickerItem(  name:$0.rawValue, isEnabled:$0.rawValue.count<7)} // TODO: fix this
+
+                PickerwDisable(prompt: "Select first topic:", items:items)
+                
                 Button("Next") {
                   nextSlide()
                 }.padding()
               .onChange(of: selectedTopic,initial:true) { val1,val2  in
-                let _ =  print("Selected Topic: \(val1.rawValue) \(val2.rawValue)")
+                let _ =  print("xxxSelected Topic: \(val1.rawValue) \(val2.rawValue)")
               }
                 Spacer()
               }
@@ -163,3 +161,15 @@ struct DemoFullScreen: View {
 #Preview {
   DemoFullScreen()
 }
+//var items = [
+//     PickerItem(name: "Item 1", isEnabled: true),
+//     PickerItem(name: "Item 2", isEnabled: false), // This item will be visible but not selectable.
+//     PickerItem(name: "Item 3", isEnabled: true)
+// ]
+//"Picker("Select First Topic", selection: $selectedTopic) {
+//  // Loop through all topics
+//  ForEach(SampleTopics.allCases) { level in
+//    Text(level.rawValue).tag(level).font(.largeTitle)
+//  }
+//}
+//.pickerStyle(InlinePickerStyle())// You can adjust the picker style"
